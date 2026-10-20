@@ -1,10 +1,12 @@
 # Open TV
 
+[![Android checks](https://github.com/PatilSarvesh/Open-TV/actions/workflows/build.yml/badge.svg)](https://github.com/PatilSarvesh/Open-TV/actions/workflows/build.yml)
+
 A simple, ad-free home screen for **Android TV / Google TV**, with remote-friendly favorites and a shortcut to your selected HDMI device.
 
-Open TV is a native Java derivative of [CleanYourTV](https://github.com/Gathin23/cleanyourtv). It retains the upstream MIT notice and font license. See [UPSTREAM.md](UPSTREAM.md) and [LICENSE](LICENSE).
+Open TV is a native Java derivative of [CleanYourTV](https://github.com/Gathin23/cleanyourtv). It retains the upstream MIT notice and font license. See [UPSTREAM.md](UPSTREAM.md), [LICENSE](LICENSE), and [third-party notices](THIRD_PARTY_NOTICES.md).
 
-**Status: experimental source, version 0.4.0-alpha01.** No signed public APK release is available yet. Xiaomi MiTV-MOOR0 on Android TV 11 is the first tested prototype device; the current alpha source still needs physical-device validation. Other models are unverified. See [COMPATIBILITY.md](COMPATIBILITY.md).
+**Status: experimental source, version 0.4.0-alpha01.** Canonical repository: [PatilSarvesh/Open-TV](https://github.com/PatilSarvesh/Open-TV). No signed public APK release is available yet. Xiaomi MiTV-MOOR0 on Android TV 11 is the first tested prototype device; the current alpha source still needs physical-device validation. Other models are unverified. See [COMPATIBILITY.md](COMPATIBILITY.md).
 
 ## Features
 
