@@ -27,7 +27,7 @@ A signed build writes `launcher/app/build/outputs/apk/release/app-release.apk`. 
 
 ## Alpha checklist
 
-1. Verify the README, compatibility matrix, upstream notices, and changelog describe the actual version. Inspect the publication file list for private device records and credentials.
+1. Verify the README, compatibility matrix, upstream notices, third-party notices, and changelog describe the actual version. Review notices for dependencies packaged in the APK and include the required license/notice material with binary distribution. Inspect the publication file list for private device records and credentials.
 2. Build from a clean checkout using external JDK/SDK paths; run the checks. Validate the release signing path using a disposable test key before using the protected public key.
 3. Test the public build on a real TV: first-time HDMI selection, saved choices, favorites editing, focus, playback/return, physical Home, cold boot, and sleep/wake. Do not reuse prototype observations as proof for a changed build.
 4. Verify the signed APK with SDK build-tools `apksigner verify --verbose --print-certs`. Record its SHA-256 checksum and signing-certificate fingerprint.
