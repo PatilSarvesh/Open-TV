@@ -22,7 +22,7 @@ Open TV opens your installed apps; subscriptions and ads inside those apps remai
 
 ## Build
 
-Requires **JDK 17**, Android SDK **platform 34**, and **build-tools 36.0.0**. Set `JAVA_HOME` and `ANDROID_HOME` to your installations. The included Gradle 9.8.1 wrapper meets Android Gradle plugin 9.4.1's minimum Gradle 9.6.0 requirement and downloads build dependencies on first use.
+Requires **JDK 17**, Android SDK **platform 35**, and **build-tools 36.0.0**. Set `JAVA_HOME` and `ANDROID_HOME` to your installations. The included Gradle 9.8.1 wrapper meets Android Gradle plugin 9.4.1's minimum Gradle 9.6.0 requirement and downloads build dependencies on first use. RecyclerView 1.4.0 requires compile SDK 35; the app's minimum API remains 26 and target API remains 34.
 
 ```bash
 bash build.sh

@@ -4,7 +4,7 @@ Open TV targets Android TV / Google TV. Xiaomi MiTV-MOOR0 on Android 11 is the f
 
 ## Development
 
-Install JDK 17, Android SDK platform 34, and build-tools 36.0.0. Use the included Gradle 9.8.1 wrapper with Android Gradle plugin 9.4.1. Set `JAVA_HOME` and `ANDROID_HOME`, then run:
+Install JDK 17, Android SDK platform 35, and build-tools 36.0.0. Use the included Gradle 9.8.1 wrapper with Android Gradle plugin 9.4.1. Set `JAVA_HOME` and `ANDROID_HOME`, then run:
 
 ```bash
 bash build.sh

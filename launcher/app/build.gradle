@@ -16,7 +16,7 @@ if (suppliedSigningValues != 0 && suppliedSigningValues != releaseSigning.size()
 
 android {
     namespace 'dev.opentv.launcher'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId 'dev.opentv.launcher'
