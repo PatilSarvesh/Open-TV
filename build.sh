@@ -10,8 +10,8 @@ if [ -z "${ANDROID_HOME:-}" ]; then
 fi
 export GRADLE_USER_HOME="${GRADLE_USER_HOME:-$ROOT/.toolchain/gradle}"
 export ANDROID_USER_HOME="${ANDROID_USER_HOME:-$ROOT/.toolchain/android-user}"
-if [ ! -x "$JAVA_HOME/bin/java" ] || [ ! -f "$ANDROID_HOME/platforms/android-34/android.jar" ]; then
-  echo "Java 17 and Android SDK platform 34/build-tools 34.0.0 are required." >&2
+if [ ! -x "$JAVA_HOME/bin/java" ] || [ ! -f "$ANDROID_HOME/platforms/android-34/android.jar" ] || [ ! -d "$ANDROID_HOME/build-tools/36.0.0" ]; then
+  echo "Java 17 and Android SDK platform 34/build-tools 36.0.0 are required." >&2
   echo "Set JAVA_HOME and ANDROID_HOME to your existing installation. See README.md." >&2
   exit 1
 fi
