@@ -8,6 +8,6 @@ The Home button accessibility service is optional. When enabled, it filters HOME
 
 ## Reporting a vulnerability
 
-Use **Security → Report a vulnerability** on the canonical `PatilSarvesh/Open-TV` GitHub repository when private reporting is enabled. Do not post exploit details, credentials, or personal logs in a public issue. If that private channel is unavailable, open an issue requesting a private contact without disclosing the vulnerability; maintainers must establish a private channel before requesting details.
+Use **Security → Report a vulnerability** on the canonical [PatilSarvesh/Open-TV repository](https://github.com/PatilSarvesh/Open-TV/security/advisories/new). Private reporting is enabled. Do not post exploit details, credentials, or personal logs in a public issue. If that private channel is unavailable, open an issue requesting a private contact without disclosing the vulnerability; maintainers must establish a private channel before requesting details.
 
 Only the current development version is maintained at this stage. Public release signing and an alpha distribution are still pending; see [docs/RELEASING.md](docs/RELEASING.md).

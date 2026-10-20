@@ -10,7 +10,7 @@ Command:
 bash build.sh assembleDebug assembleRelease testDebugUnitTest lintDebug
 ```
 
-The public-default changes build successfully for debug and unsigned release. All 79 JVM tests pass (zero failures, errors, or skips). Debug lint reports zero errors, 52 warnings, and 43 informational findings. All 64 source XML documents parse, and the workflow/issue YAML files parse successfully. GitHub Actions execution is pending repository publication.
+The public-default changes build successfully for debug and unsigned release. All 79 JVM tests pass (zero failures, errors, or skips). Debug lint reports zero errors, 52 warnings, and 43 informational findings. All 64 source XML documents parse, and the workflow/issue YAML files parse successfully. The [Android checks workflow](https://github.com/PatilSarvesh/Open-TV/actions/workflows/build.yml) repeats builds, tests, and lint on GitHub; its run history records hosted results for each commit.
 
 An exact copy of the 136 staged public files was built in a fresh directory without the workspace's `.toolchain/` folder, using explicit external JDK/SDK paths and the existing dependency cache. The same build/test/lint checks passed. Packaged application IDs and absence of Internet permission were checked for debug and release.
 
