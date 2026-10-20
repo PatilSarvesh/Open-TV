@@ -13,7 +13,8 @@ Open TV is a CleanYourTV derivative, focused on a simple local home screen, remo
 - [x] Prepare public README, compatibility, contribution, privacy, issue, and release documentation.
 - [x] Exclude personal device-operation records and signing/toolchain files from Git.
 - [x] Add build, test, and lint workflow and dependency-update configuration.
-- [ ] Publish source and confirm checks on GitHub.
+- [x] Publish source at [PatilSarvesh/Open-TV](https://github.com/PatilSarvesh/Open-TV).
+- GitHub-hosted check results are available in the [build workflow](https://github.com/PatilSarvesh/Open-TV/actions/workflows/build.yml).
 
 ## Before an installable public alpha
 
