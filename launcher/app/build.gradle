@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Missing credentials produce an unsigned release APK. Never fall back to the development key.
+def releaseSigning = [
+    storeFile: System.getenv('OPENTV_KEYSTORE_PATH'),
+    storePassword: System.getenv('OPENTV_KEYSTORE_PASSWORD'),
+    keyAlias: System.getenv('OPENTV_KEY_ALIAS'),
+    keyPassword: System.getenv('OPENTV_KEY_PASSWORD')
+]
+def suppliedSigningValues = releaseSigning.values().count { it != null && !it.isEmpty() }
+if (suppliedSigningValues != 0 && suppliedSigningValues != releaseSigning.size()) {
+    throw new GradleException('Set all four OPENTV signing variables, or unset all four for an unsigned release.')
+}
+
+android {
+    namespace 'dev.opentv.launcher'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'dev.opentv.launcher'
+        minSdk 26
+        targetSdk 34
+        versionCode 6
+        versionName '0.4.0-alpha01'
+    }
+
+    signingConfigs {
+        if (suppliedSigningValues == releaseSigning.size()) {
+            publicRelease {
+                storeFile rootProject.file(releaseSigning.storeFile)
+                storePassword releaseSigning.storePassword
+                keyAlias releaseSigning.keyAlias
+                keyPassword releaseSigning.keyPassword
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-dev'
+        }
+        release {
+            // R8 strips and optimises the code (AndroidX included): smaller APK, faster start on a slow TV CPU.
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (suppliedSigningValues == releaseSigning.size()) {
+                signingConfig signingConfigs.publicRelease
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+    // Test only (never in the APK): plain JVM tests for the module card validators, src/test.
+    testImplementation 'junit:junit:4.13.2'
+}

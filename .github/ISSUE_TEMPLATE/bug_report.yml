@@ -1,0 +1,36 @@
+name: Bug or device compatibility report
+description: Report a reproducible problem or results from another TV.
+body:
+  - type: input
+    id: device
+    attributes:
+      label: TV or streaming device
+      description: Brand and model only. Do not include serial numbers or network addresses.
+      placeholder: Xiaomi MiTV-MOOR0
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android version and firmware
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Open TV version and build type
+      placeholder: 0.4.0-alpha01-dev, locally built debug APK
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Steps, expected result, and actual result
+      description: Include whether Home, D-pad, HDMI, and sleep/wake work, if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional screenshots or redacted logs
+      description: Remove account details, Wi-Fi names, network addresses, serial numbers, and tokens.

@@ -1,0 +1,22 @@
+.toolchain/
+.gradle/
+**/build/
+**/local.properties
+**/.gradle/
+*.jks
+*.keystore
+backup/
+.DS_Store
+.agents/
+.codex/
+.env
+.env.*
+!*.example
+*.p12
+*.pfx
+
+# Personal device records remain available locally, outside the public source tree.
+/DEVICE.md
+/APP_INVENTORY.md
+/CLEANUP_REPORT.md
+/OPTIONAL_CLEANUP_REPORT.md

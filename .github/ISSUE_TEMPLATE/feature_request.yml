@@ -1,0 +1,17 @@
+name: Feature request
+description: Suggest an improvement to the launcher.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What task is difficult today?
+      description: Describe the TV/remote use case and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested behavior
+      description: Explain how it would work with a D-pad and OK button.
+    validations:
+      required: true
